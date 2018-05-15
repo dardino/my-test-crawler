@@ -1,133 +1,126 @@
-﻿http://iptv.64tv.info:8000/
-http://92.222.87.254:8000/
-http://voa.selfip.biz:8000/
-http://149.202.199.11:8181/
-http://titaniptv.com:9140/
-http://185.53.163.200:2015/
-http://nyon-iptv.com:8844/
-http://streamtv.homelinux.com:8000/
-http://newpanels.farqiniptv.eu:9005/
-http://iptvcccamserver.it:80/
-http://gigasip.dyndns.tv:3838/
-http://ultratvmx.tk:8000/
-http://blindex.zapto.org:8000/
-http://piromery97.zapto.org:9000/
-http://sentatv.zapto.org:22000/
-http://santaader.zapto.org:9100/
-http://sentatv2.zapto.org:6600/
-http://wweraw.zapto.org:8080/
-http://ippo.zapto.org:8000/
-http://haldunxtream.hopto.org:8060/
-http://tvpanonica.ddns.net:8000/
-http://clubeiptv.ddns.net:8444/
-http://ipglobemain1.ddns.net:8000/
-http://iptv4.ddns.net:8000/
-http://kiptv3.ddns.net:8000/
-http://servuk.ddns.net:8000/
-http://iptv-world2.ddns.net:8000/
-http://jurbas.ddns.net:8050/
-http://misterxiptv2.ddns.net:8000/
-http://buritv.ddns.net:8000/
-http://digitalrevolution.ddns.net:8080/
-http://cccamsat.ddns.net:8000/
-http://iptveo.ddns.net:11071/
-http://dgnetworks1.dyndns.org:8000/
-http://protokoll.dyndns.org:15001/
-http://1iptv.dyndns.org:7000/
-http://nuevohost.dyndns.org:8000/
-http://powertv5.dyndns.org:24715/
-http://titaniptv.com:9140
-http://185.53.163.200:2015
-http://nyon-iptv.com:8844
-http://185.53.163.221:1239
-http://iptvcccamserver.it
-http://v2.bazarbijoux.com
-http://newpanels.farqiniptv.eu:9005
-http://gigasip.dyndns.tv:3838
-http://panel2172.farqiniptv.eu:9005
-http://vps139229.vps.ovh.ca
-http://ultratvmx.tk:8000
-http://37.187.171.81:8000
-http://163.172.107.33:8000
-http://89.163.225.105:8000
-http://92.222.87.254:8000
-http://149.202.199.11:8181
-http://151.80.100.176:8005
-http://cloud1.hyperiptv.xyz:9000
-http://voa.selfip.biz:8000
-http://streamtv.homelinux.com:8000
-http://xxx.iptv1.tk:8000
-http://ligxtv.net
-http://195.154.207.210:8883
-http://premiumiptv1.mine.nu
-http://85.214.28.124:8000
-http://goldtv.goldtv.al:8000
-http://2.primatv.club:8450
-http://globe4.midomed.com:8883
-http://149.202.196.83:7788
-http://restream.goldtv.al:8000
-http://goldtv.al:8000
-http://full.goldtv.al:8000
-http://xtrastv.pointto.us:8000
-http://164.132.219.57:3838
-http://195.245.118.6:8000
-http://62.210.87.116:8883
-http://globe.midomed.com:8883
-http://iptv.nador-sat.com:9300
-http://www.iptvgafsa.tn:8000
-http://www.goldtv.al:8000
-http://167.114.208.118:8000
-http://www.ultratvmx.tk
-http://myiptv.happy-team.org:8888
-http://prva-iptv.hugo.mk:1935
-http://62.210.78.114:8800
-http://server3.tv-monde.com:8000
-http://zdravahrana.dyndns.tv:8000
-http://163.172.47.247:8000
-http://iptv.sat-tv.net:8000
-http://iptvgafsa.tn:8000
-http://178.noips.org:57575
-http://www.seterms.com
-http://82.114.81.66:8000
-http://zdravahrana.ydns.eu:8000
-http://mytring.al:8000
-https://github.com
-https://urlscan.io
-http://albanet.mytring.al:8000
-http://jraces.com
-http://www.keywordfree.com
-http://www.minikeyword.com
-http://www.wowkeyword.com
-http://www.seotoolnet.com
-http://llls.co.za.existsite.com
-http://schhunting.co.za.everyone.domains
-http://iptv2017.ddns.net:8100
-http://159.89.5.141:8000
-http://dreamtv.on-the-web.tv:2709
-http://89.163.224.7:9005
-http://ipwebtv.dyndns.tv:8000
-http://powertv5.dyndns.org:24715
-http://iptvking2000.com:8000
-http://vod.redboxiptv.biz:2002
-http://89.252.203.170:44444
-http://nuriptv.com:2017
-http://171819.dyndns.tv
-http://www.seodiving.com
-http://194.88.105.83:8888
-http://195.154.106.121:8000
-http://iptv.is-by.us:8000
-http://llls.co.za.detaildomain.com
-http://149.202.67.197:9999
-http://145.239.1.102:8000
-http://149.202.211.228:24715
-http://62.4.29.65:8000
-http://j.ddns.net:31000
-http://premium.tvshqip.us:8880
-http://shearlike.com:8080
-http://iptvld.paranosotros.ru:8000
-http://server.smartgadgetsbox.com:25461
-http://qfaredush.dyndns.info:8000
-http://ott-premium.com:61555
-http://93.118.32.94:8000
-http://space-iptv.ddns.net:8112
-http://forum.kajgana.com
+http://vipforever.club:8181	1
+http://iptv.64tv.info:8000/	-1
+http://92.222.87.254:8000/	0
+http://voa.selfip.biz:8000/	0
+http://titaniptv.com:9140/	0
+http://185.53.163.200:2015	0
+http://nyon-iptv.com:8844	0
+http://streamtv.homelinux.com:8000	0
+http://newpanels.farqiniptv.eu:9005	0
+http://iptvcccamserver.it:80	0
+http://gigasip.dyndns.tv:3838	0
+http://ultratvmx.tk:8000	0
+http://blindex.zapto.org:8000	0
+http://piromery97.zapto.org:9000	0
+http://sentatv.zapto.org:22000	0
+http://santaader.zapto.org:9100	0
+http://sentatv2.zapto.org:6600	0
+http://wweraw.zapto.org:8080	0
+http://ippo.zapto.org:8000	0
+http://haldunxtream.hopto.org:8060	0
+http://tvpanonica.ddns.net:8000	0
+http://clubeiptv.ddns.net:8444	0
+http://ipglobemain1.ddns.net:8000	0
+http://iptv4.ddns.net:8000	0
+http://kiptv3.ddns.net:8000	0
+http://servuk.ddns.net:8000	0
+http://iptv-world2.ddns.net:8000	0
+http://jurbas.ddns.net:8050	0
+http://misterxiptv2.ddns.net:8000	0
+http://buritv.ddns.net:8000	0
+http://digitalrevolution.ddns.net:8080	0
+http://cccamsat.ddns.net:8000	0
+http://iptveo.ddns.net:11071	0
+http://dgnetworks1.dyndns.org:8000	0
+http://protokoll.dyndns.org:15001	0
+http://1iptv.dyndns.org:7000	0
+http://nuevohost.dyndns.org:8000	0
+http://powertv5.dyndns.org:24715	0
+http://titaniptv.com:9140	0
+http://185.53.163.221:1239	0
+http://iptvcccamserver.it	0
+http://v2.bazarbijoux.com	0
+http://panel2172.farqiniptv.eu:9005	0
+http://vps139229.vps.ovh.ca	0
+http://37.187.171.81:8000	0
+http://163.172.107.33:8000	0
+http://89.163.225.105:8000	0
+http://92.222.87.254:8000	0
+http://149.202.199.11:8181	0
+http://151.80.100.176:8005	0
+http://cloud1.hyperiptv.xyz:9000	0
+http://voa.selfip.biz:8000	0
+http://xxx.iptv1.tk:8000	0
+http://ligxtv.net	0
+http://195.154.207.210:8883	0
+http://premiumiptv1.mine.nu	0
+http://85.214.28.124:8000	0
+http://goldtv.goldtv.al:8000	0
+http://2.primatv.club:8450	0
+http://globe4.midomed.com:8883	0
+http://149.202.196.83:7788	0
+http://restream.goldtv.al:8000	0
+http://goldtv.al:8000	0
+http://full.goldtv.al:8000	0
+http://xtrastv.pointto.us:8000	0
+http://164.132.219.57:3838	0
+http://195.245.118.6:8000	0
+http://62.210.87.116:8883	0
+http://globe.midomed.com:8883	0
+http://iptv.nador-sat.com:9300	0
+http://www.iptvgafsa.tn:8000	0
+http://www.goldtv.al:8000	0
+http://167.114.208.118:8000	0
+http://www.ultratvmx.tk	0
+http://myiptv.happy-team.org:8888	0
+http://prva-iptv.hugo.mk:1935	0
+http://62.210.78.114:8800	0
+http://server3.tv-monde.com:8000	0
+http://zdravahrana.dyndns.tv:8000	0
+http://163.172.47.247:8000	0
+http://iptv.sat-tv.net:8000	0
+http://iptvgafsa.tn:8000	0
+http://178.noips.org:57575	0
+http://www.seterms.com	0
+http://82.114.81.66:8000	0
+http://zdravahrana.ydns.eu:8000	0
+http://mytring.al:8000	0
+https://github.com	0
+https://urlscan.io	0
+http://albanet.mytring.al:8000	0
+http://jraces.com	0
+http://www.keywordfree.com	0
+http://www.minikeyword.com	0
+http://www.wowkeyword.com	0
+http://www.seotoolnet.com	0
+http://llls.co.za.existsite.com	0
+http://schhunting.co.za.everyone.domains	0
+http://iptv2017.ddns.net:8100	0
+http://159.89.5.141:8000	0
+http://dreamtv.on-the-web.tv:2709	0
+http://89.163.224.7:9005	0
+http://ipwebtv.dyndns.tv:8000	0
+http://iptvking2000.com:8000	0
+http://vod.redboxiptv.biz:2002	0
+http://89.252.203.170:44444	0
+http://nuriptv.com:2017	0
+http://171819.dyndns.tv	0
+http://www.seodiving.com	0
+http://194.88.105.83:8888	0
+http://195.154.106.121:8000	0
+http://iptv.is-by.us:8000	0
+http://llls.co.za.detaildomain.com	0
+http://149.202.67.197:9999	0
+http://145.239.1.102:8000	0
+http://149.202.211.228:24715	0
+http://62.4.29.65:8000	0
+http://j.ddns.net:31000	0
+http://premium.tvshqip.us:8880	0
+http://shearlike.com:8080	0
+http://iptvld.paranosotros.ru:8000	0
+http://server.smartgadgetsbox.com:25461	0
+http://qfaredush.dyndns.info:8000	0
+http://ott-premium.com:61555	0
+http://93.118.32.94:8000	0
+http://space-iptv.ddns.net:8112	0
+http://forum.kajgana.com	0

