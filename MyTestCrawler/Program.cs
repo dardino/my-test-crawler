@@ -71,7 +71,7 @@ namespace MyTestCrawler
 				try
 				{
 					var req = await client.GetAsync($"{url}/get.php?username={user}&password={user}&type=m3u_plus&output=mpegts");
-					Console.WriteLine("   > " + url + " user " + user + "\t\t" + req.StatusCode);
+					Console.WriteLine(("   > " + url + " user " + user).PadRight(80, ' ') + req.StatusCode);
 					if (req.StatusCode != System.Net.HttpStatusCode.OK)
 						break;
 					else {
